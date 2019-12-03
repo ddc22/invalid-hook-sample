@@ -1,0 +1,37 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.19.0",
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "react": "^16.11.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "dev:install": "lerna bootstrap",
+    "build:simple:component:lib": "lerna run build:simple:component:lib",
+    "build:simple:component:lib:watch": "lerna run build:simple:component:lib:watch",
+    "build:complex:components": "lerna run build:complex:components",
+    "build:complex:components:watch": "lerna run build:complex:components:watch",
+    "template:start": "lerna run template:start",
+    "app:start": "lerna run app:start",
+    "build:react:pos": "lerna run build:react:pos",
+    "prod:install": "lerna bootstrap --ci",
+    "deploy": "lerna run deploy",
+    "undeploy": "lerna run undeploy",
+    "local:dev:install": "lerna bootstrap --registry 'http://localhost:4873/'",
+    "local:deploy": "npm run deploy --registry 'http://localhost:4873/'",
+    "local:undeploy": "npm run undeploy --registry 'http://localhost:4873/' --force",
+    "set:version": "lerna version --no-git-tag-version --yes --exact",
+    "show:dependency:graph": "lerna ls --graph",
+    "clean": "lerna clean",
+    "deepclean": "lerna run deepclean"
+  }
+}

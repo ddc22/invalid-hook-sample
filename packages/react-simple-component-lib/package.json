@@ -1,0 +1,38 @@
+{
+  "name": "react-simple-component-lib",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Dehan <dehandecroos@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "react": "^16.11.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "deepclean": "rimraf package-lock.json node_modules dist lib",
+    "build:simple:component:lib": "webpack --config webpack.config.js",
+    "build:simple:component:lib:watch": "npm run build:submodules -- --watch",
+    "prepack": "npm run build:submodules",
+    "deploy": "npm publish",
+    "undeploy": "npm unpublish",
+    "dev:undeploy": "npm unpublish @enactor/react-base-components --registry 'http://localhost:4873/' --force"
+  }
+}
